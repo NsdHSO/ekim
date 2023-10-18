@@ -20,8 +20,6 @@ pub mod duplicate_remove {
   }
 
   pub fn add_plural (s: String)->String{
-    let mut single = String::from(s);
-    single.push('s');
-    single
+    s+"s"
   }
 }
