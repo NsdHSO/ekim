@@ -19,7 +19,9 @@ pub mod duplicate_remove {
     d
   }
 
-  pub fn remove_element(nums: &mut Vec<i32>, val: i32) -> i32 {
-
+  pub fn add_plural (s: String)->String{
+    let mut single = String::from(s);
+    single.push('s');
+    single
   }
 }
