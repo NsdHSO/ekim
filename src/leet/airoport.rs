@@ -1,3 +1,4 @@
+use crate::leet::passenger;
 use chrono::{DateTime, Local};
 pub struct Airport {
     default_size: i32,
@@ -23,34 +24,3 @@ impl Airport {
         &self.destination_take_off
     }
 }
-
-#[derive(Debug)]
-pub struct Destination {
-    airplane: String,
-    number_airplane: String,
-    number_flight: String,
-    time_to_take_off: DateTime<Local>,
-    airport_take_off: Airport,
-    airport_landed: Airport,
-}
-impl Destination {
-    pub fn new(
-        airplane: String,
-        number_plane: String,
-        number_flight: String,
-        time_to_take_off: DateTime<Local>,
-        airport_take_off: Airport,
-        airport_landed: Airport,
-    ) -> Self {
-        Destination {
-            airplane,
-            number_flight,
-            time_to_take_off,
-            number_airplane: number_plane,
-            airport_landed,
-            airport_take_off,
-        }
-    }
-}
-
-pub struct Passenger {}
