@@ -1,5 +1,6 @@
-use crate::leet::passenger;
-use chrono::{DateTime, Local};
+use crate::leet::destination::Destination;
+
+#[derive(Debug)]
 pub struct Airport {
     default_size: i32,
     is_snow: bool,
