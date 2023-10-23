@@ -1,13 +1,20 @@
 mod leet;
-use leet::remove_duplicate::duplicate_remove;
+use crate::leet::airoport::Airport;
+use chrono::Local;
+use leet::airoport;
+
 fn main() {
-  println!("Hello, world!");
-  let mut a = Vec::from([3,3,3,4]);
-  let v = duplicate_remove::remove_duplicates(&mut a);
-  println!("{:?}", v);
-  println!("{:?}", a);
-  let book = String::from("Book");
+    let mut timisoara = Airport::new();
+    let mut bucuresti = Airport::new();
+    let destination = airoport::Destination::new(
+        "Bcr".to_string(),
+        "AB312".to_string(),
+        "Bcr".to_string(),
+        Local::now(),
+        timisoara,
+        bucuresti,
+    );
 
-  println!("I have one {}, and you have {}", book, duplicate_remove::add_plural(book.clone()))
-
+    timisoara.landed(destination);
+    println!("{:?}", timisoara.get_destinations())
 }
